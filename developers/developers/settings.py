@@ -29,14 +29,16 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
+# Django apps installed in this Django instance
+# aside default django app install (plugin) also polls app
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'polls.apps.PollsConfig',   # polls/apps.py - PollsConfig
+    'django.contrib.admin', # The admin site. You’ll use it shortly.
+    'django.contrib.auth',  # An authentication system.
+    'django.contrib.contenttypes',  # A framework for content types.
+    'django.contrib.sessions',  # A session framework.
+    'django.contrib.messages',  # A messaging framework.
+    'django.contrib.staticfiles',   # A framework for managing static files.
 ]
 
 MIDDLEWARE = [
@@ -118,13 +120,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
-INSTALLED_APPS = [
-    'polls.apps.PollsConfig',   # polls/apps.py - PollsConfig
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-]
