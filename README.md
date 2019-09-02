@@ -3,13 +3,22 @@ Hands on Django Python Web Framework
 
 - using Django version 2.2.4 with Python 3.7
 - show install version: `python3 -m django --version`
+- django is a model-template-view (MTV) framework
 
-## start
+## folder simplest-project/
+- a simplest possible project without the usage of `startproject`
+- a one-file example
+- run: `python3.7 developer.py runserver`
+
+## folder developer/
+- followed the official tutorials 
+
+### start
 - create project: `django-admin startproject mysite`
-- run django server: `python manage.py runserver` or `python3.7`
+- run django server: `python3.7 manage.py runserver`
 - add an app to project: `python manage.py startapp polls`
 
-## sqlite3 cheatsheet
+### sqlite3 cheatsheet
 - open database: `developers$ sqlite3 db.sqlite3`
 - list db's: `sqlite> .databases`
 - list tables: `sqlite> .tables`
@@ -32,3 +41,4 @@ __table operation__
 
 ## links
 - https://www.djangoproject.com/
+- https://docs.djangoproject.com/en/2.2/intro/tutorial01
