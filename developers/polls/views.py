@@ -22,7 +22,16 @@ def results(request, question_id):
         question = Question.objects.get(pk=question_id)
     except Question.DoesNotExist:
         raise Http404("Question does not exist")
-    return render(request, 'polls/detail.html', {'question': question})
+    return render(request, 'polls/results.html', {'question': question})
 
 def vote(request, question_id):
     return HttpResponse("vote view/page: %s" % question_id)
+
+from rest_framework import viewsets
+from .models import Question
+from .serializers import QuestionSerializer
+
+class QuestionViewSet(viewsets.ModelViewSet):
+    """API endpoint for listing and creating questions."""
+    queryset = Question.objects.order_by('end')
+    serializer_class = QuestionSerializer

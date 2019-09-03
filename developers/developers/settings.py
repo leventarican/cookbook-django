@@ -32,7 +32,15 @@ ALLOWED_HOSTS = []
 # Django apps installed in this Django instance
 # aside default django app install (plugin) also polls app
 INSTALLED_APPS = [
+    # Third party apps
+    # rest framework: pip3 install djangorestframework
+    'rest_framework',
+    'rest_framework.authtoken',
+
+    # internal apps
     'polls.apps.PollsConfig',   # polls/apps.py - PollsConfig
+
+    # default django apps
     'django.contrib.admin', # The admin site. You’ll use it shortly.
     'django.contrib.auth',  # An authentication system.
     'django.contrib.contenttypes',  # A framework for content types.
